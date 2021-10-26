@@ -2,7 +2,6 @@ from flask import Flask
 from flask.json import jsonify
 
 app = Flask(__name__)
-int somme = 150
 
 @app.route('/account/<int:somme_compte>', methods=['GET'])
 def compte(somme_compte):
