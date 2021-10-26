@@ -8,7 +8,7 @@ def compte(somme_compte):
     value = 0
     if account_number = 123456:
            value = 20000
-    return jsonify({"somme": value})
+    return jsonify({"somme": int(value)})
 
 if __name__ == '__main__':
     app.run(debug=True)
