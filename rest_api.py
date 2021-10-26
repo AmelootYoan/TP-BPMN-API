@@ -14,6 +14,8 @@ app = Flask(__name__)
 def ski(nbSkis):
     if nbSkis == 4:
         return jsonify({"nb_materials": int(nbSkis*8)})
+    else:
+        return jsonify({"nb_materials": "c'est de la merde..."})
 
 if __name__ == '__main__':
     app.run(debug=True)
