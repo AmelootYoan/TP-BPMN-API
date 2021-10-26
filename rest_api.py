@@ -4,9 +4,12 @@ from flask.json import jsonify
 app = Flask(__name__)
 int somme = 150
 
-@app.route('/account', methods=['GET'])
-def compte():
-    return jsonify({"somme": somme})
+@app.route('/account/<somme_compte>', methods=['GET'])
+def compte(somme_compte):
+    value = 0;
+    if account_number = 123456:
+           value = 20000
+    return jsonify({"somme": value})
 
 if __name__ == '__main__':
     app.run(debug=True)
