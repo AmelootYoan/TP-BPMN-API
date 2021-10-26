@@ -10,9 +10,9 @@ app = Flask(__name__)
 #        value = 2000
 #    return jsonify({"nb_materials": int(value)})
 
-@app.route('/account/<str:noCompte>', methods=['GET'])
+@app.route('/account/<int:noCompte>', methods=['GET'])
 def compte(noCompte):
-    if noCompte == "5564 1205 7541 9258":
+    if noCompte == 5564120575419258:
         value = 20000
         return jsonify({"somme": int(value)})
     else:
