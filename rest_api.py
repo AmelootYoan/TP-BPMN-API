@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 @app.route('/skis/<int:nbSkis>', methods=['GET'])
 def ski(nbSkis):
-    return jsonify({"nb_materials": int(nbSkis*8)})
+    if nbSkis == 4:
+        return jsonify({"nb_materials": int(nbSkis*8)})
 
 if __name__ == '__main__':
     app.run(debug=True)
