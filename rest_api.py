@@ -10,12 +10,13 @@ app = Flask(__name__)
 #        value = 2000
 #    return jsonify({"nb_materials": int(value)})
 
-@app.route('/skis/<int:nbSkis>', methods=['GET'])
-def ski(nbSkis):
-    if nbSkis == 4:
-        return jsonify({"nb_materials": int(nbSkis*8)})
+@app.route('/account/<str:noCompte>', methods=['GET'])
+def compte(noCompte):
+    if noCompte == "5564 1205 7541 9258":
+        value = 20000
+        return jsonify({"somme": int(value)})
     else:
-        return jsonify({"nb_materials": "c'est de la merde..."})
+        return jsonify({"somme": "c'est pas ton compte..."})
 
 if __name__ == '__main__':
     app.run(debug=True)
